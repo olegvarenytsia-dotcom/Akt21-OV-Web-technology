@@ -1,1 +1,46 @@
+body {
+    background-color: #f0f0f0;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #4a90e2;
+}
+
+/* Власна секція */
+.quote-section {
+
+    /* Hex колір з номером варіанта */
+    background-color: #212121;
+
+    color: white;
+
+    /* Якщо номер непарний — справа */
+    text-align: right;
+
+    /* Відступ = номер варіанта */
+    padding: 21px;
+
+    border-radius: 10px;
+}
