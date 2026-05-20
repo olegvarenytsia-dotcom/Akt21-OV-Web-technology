@@ -28,19 +28,15 @@ h2 {
     color: #4a90e2;
 }
 
-/* Власна секція */
 .quote-section {
 
-    /* Hex колір з номером варіанта */
-    background-color: #212121;
+    background-color: #222222;
 
     color: white;
 
-    /* Якщо номер непарний — справа */
-    text-align: right;
+    text-align: center;
 
-    /* Відступ = номер варіанта */
-    padding: 21px;
+    padding: 2px;
 
     border-radius: 10px;
 }
