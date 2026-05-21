@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 5</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #text {
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #222222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Лабораторна робота 5</h1>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Зміна тексту</h2>
+
+            <p id="text">
+                Це початковий текст.
+            </p>
+
+            <button id="changeButton">
+                Змінити текст
+            </button>
+
+        </section>
+
+        <section>
+
+            <h2>Додавання елементів</h2>
+
+            <button id="addButton">
+                Додати елемент
+            </button>
+
+            <div id="container"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Виконав: Олег</p>
+    </footer>
+
+    <script>
+
+        // Отримання елементів DOM
+        let text = document.getElementById("text");
+
+        let changeButton = document.getElementById("changeButton");
+
+        let addButton = document.getElementById("addButton");
+
+        let container = document.getElementById("container");
+
+
+
+        // Зміна тексту при натисканні кнопки
+        changeButton.addEventListener("click", function () {
+
+            text.textContent = "Текст було змінено!";
+
+            console.log("Текст змінено.");
+
+        });
+
+
+
+        // Зміна стилю при наведенні миші
+        text.addEventListener("mouseover", function () {
+
+            text.style.color = "red";
+
+            text.style.fontSize = "28px";
+
+        });
+
+        text.addEventListener("mouseout", function () {
+
+            text.style.color = "black";
+
+            text.style.fontSize = "20px";
+
+        });
+
+
+
+        // Додавання нового елемента
+        addButton.addEventListener("click", function () {
+
+            let newElement = document.createElement("p");
+
+            newElement.textContent = "Новий елемент додано!";
+
+            container.appendChild(newElement);
+
+            console.log("Новий елемент створено.");
+
+        });
+
+    </script>
+
+</body>
+
+</html>
