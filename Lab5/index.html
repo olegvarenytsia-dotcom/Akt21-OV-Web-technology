@@ -28,8 +28,8 @@
 
         section {
             background-color: white;
-            padding: 20px;
             margin-bottom: 20px;
+            padding: 20px;
             border-radius: 10px;
         }
 
@@ -42,6 +42,17 @@
         #text {
             font-size: 20px;
             transition: 0.3s;
+        }
+
+        #container p {
+
+            background-color: lightblue;
+
+            padding: 10px;
+
+            margin-top: 10px;
+
+            border-radius: 5px;
         }
 
         footer {
@@ -63,12 +74,13 @@
 
     <main>
 
+        <!-- Зміна тексту -->
         <section>
 
-            <h2>Зміна тексту</h2>
+            <h2>Зміна вмісту</h2>
 
             <p id="text">
-                Це початковий текст.
+                Початковий текст сторінки.
             </p>
 
             <button id="changeButton">
@@ -77,9 +89,10 @@
 
         </section>
 
+        <!-- Додавання елементів -->
         <section>
 
-            <h2>Додавання елементів</h2>
+            <h2>Динамічне додавання елементів</h2>
 
             <button id="addButton">
                 Додати елемент
@@ -108,10 +121,10 @@
 
 
 
-        // Зміна тексту при натисканні кнопки
+        // Зміна вмісту при натисканні кнопки
         changeButton.addEventListener("click", function () {
 
-            text.textContent = "Текст було змінено!";
+            text.textContent = "Текст успішно змінено!";
 
             console.log("Текст змінено.");
 
@@ -128,6 +141,9 @@
 
         });
 
+
+
+        // Повернення стилю після відведення миші
         text.addEventListener("mouseout", function () {
 
             text.style.color = "black";
@@ -138,16 +154,16 @@
 
 
 
-        // Додавання нового елемента
+        // Динамічне додавання елементів
         addButton.addEventListener("click", function () {
 
             let newElement = document.createElement("p");
 
-            newElement.textContent = "Новий елемент додано!";
+            newElement.textContent = "Новий елемент створено!";
 
             container.appendChild(newElement);
 
-            console.log("Новий елемент створено.");
+            console.log("Елемент додано.");
 
         });
 
