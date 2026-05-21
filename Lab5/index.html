@@ -28,8 +28,8 @@
 
         section {
             background-color: white;
-            margin-bottom: 20px;
             padding: 20px;
+            margin-bottom: 20px;
             border-radius: 10px;
         }
 
@@ -44,15 +44,8 @@
             transition: 0.3s;
         }
 
-        #container p {
-
-            background-color: lightblue;
-
-            padding: 10px;
-
+        #list li {
             margin-top: 10px;
-
-            border-radius: 5px;
         }
 
         footer {
@@ -69,7 +62,7 @@
 <body>
 
     <header>
-        <h1>Лабораторна робота 5</h1>
+        <h1>Лабораторна робота 6</h1>
     </header>
 
     <main>
@@ -77,7 +70,7 @@
         <!-- Зміна тексту -->
         <section>
 
-            <h2>Зміна вмісту</h2>
+            <h2>Зміна контенту</h2>
 
             <p id="text">
                 Початковий текст сторінки.
@@ -92,20 +85,35 @@
         <!-- Додавання елементів -->
         <section>
 
-            <h2>Динамічне додавання елементів</h2>
+            <h2>Список елементів</h2>
 
             <button id="addButton">
                 Додати елемент
             </button>
 
-            <div id="container"></div>
+            <button id="removeButton">
+                Видалити елемент
+            </button>
+
+            <ul id="list"></ul>
+
+        </section>
+
+        <!-- Додаткове завдання -->
+        <section>
+
+            <h2>Додаткове завдання</h2>
+
+            <button id="variantButton">
+                Натисніть 2 рази!
+            </button>
 
         </section>
 
     </main>
 
     <footer>
-        <p>Виконав: Олег</p>
+        <p>Виконав: Олег Варениця</p>
     </footer>
 
     <script>
@@ -117,11 +125,15 @@
 
         let addButton = document.getElementById("addButton");
 
-        let container = document.getElementById("container");
+        let removeButton = document.getElementById("removeButton");
+
+        let list = document.getElementById("list");
+
+        let variantButton = document.getElementById("variantButton");
 
 
 
-        // Зміна вмісту при натисканні кнопки
+        // Зміна тексту
         changeButton.addEventListener("click", function () {
 
             text.textContent = "Текст успішно змінено!";
@@ -132,7 +144,7 @@
 
 
 
-        // Зміна стилю при наведенні миші
+        // Зміна стилю при наведенні
         text.addEventListener("mouseover", function () {
 
             text.style.color = "red";
@@ -143,7 +155,7 @@
 
 
 
-        // Повернення стилю після відведення миші
+        // Повернення стилю
         text.addEventListener("mouseout", function () {
 
             text.style.color = "black";
@@ -154,16 +166,50 @@
 
 
 
-        // Динамічне додавання елементів
+        // Додавання нового елемента
         addButton.addEventListener("click", function () {
 
-            let newElement = document.createElement("p");
+            let newItem = document.createElement("li");
 
-            newElement.textContent = "Новий елемент створено!";
+            newItem.textContent = "Новий елемент списку";
 
-            container.appendChild(newElement);
+            list.appendChild(newItem);
 
             console.log("Елемент додано.");
+
+        });
+
+
+
+        // Видалення елемента
+        removeButton.addEventListener("click", function () {
+
+            if (list.lastElementChild) {
+
+                list.removeChild(list.lastElementChild);
+
+                console.log("Елемент видалено.");
+
+            }
+
+        });
+
+
+
+        // Додаткове завдання
+        let clickCount = 0;
+
+        variantButton.addEventListener("click", function () {
+
+            clickCount++;
+
+            if (clickCount === 2) {
+
+                alert("Олег Варениця варіант номер 2!");
+
+                clickCount = 0;
+
+            }
 
         });
 
