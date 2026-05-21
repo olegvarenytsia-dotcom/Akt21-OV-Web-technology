@@ -21,6 +21,16 @@
             text-align: center;
             padding: 20px;
         }
+        <!-- Додаткове завдання -->
+<section>
+
+    <h2>Додаткове завдання</h2>
+
+    <button id="variantButton">
+        Натисніть 6 разів!
+    </button>
+
+</section>
 
         main {
             padding: 20px;
@@ -180,7 +190,24 @@
             }
 
         });
+// Додаткове завдання
+let clickCount = 0;
 
+let variantButton = document.getElementById("variantButton");
+
+variantButton.addEventListener("click", function () {
+
+    clickCount++;
+
+    if (clickCount === 6) {
+
+        alert("Олег Варениця варіант номер 6!");
+
+        clickCount = 0;
+
+    }
+
+});
     </script>
 
 </body>
