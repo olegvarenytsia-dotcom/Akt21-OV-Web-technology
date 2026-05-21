@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота №3 — Варіант 6</title>
-    <!-- Підключення зовнішнього CSS-файлу -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Сайт-візитка</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="main-header">
-        <h1>Адаптивна галерея зображень</h1>
-        <p>Варіант 6 | Репозиторій: Akt_21-KN-web-technologies</p>
+    <!-- Header -->
+    <header>
+
+        <h1>Олег Варениця</h1>
+
+        <p>Студент та майбутній веб-розробник</p>
+
     </header>
 
-    <main class="container">
-        <!-- Головний Flexbox контейнер для 6 блоків-карток -->
-        <div class="gallery-flex">
-            
-            <!-- Картка 1 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Гірський пейзаж">
-                <div class="card-body">
-                    <h3>Гірські вершини</h3>
-                    <p>Дослідження базових концепцій веб-розмітки, семантики та побудови скелету сторінки.</p>
-                </div>
-            </div>
+    <!-- Navigation -->
+    <nav>
 
-            <!-- Картка 2 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Морський захід">
-                <div class="card-body">
-                    <h3>Морське узбережжя</h3>
-                    <p>Каскадні таблиці стилів, робота з палітрами та блочна модель відображення контенту.</p>
-                </div>
-            </div>
+        <a href="#about">Про себе</a>
 
-            <!-- Картка 3 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Лісова стежка">
-                <div class="card-body">
-                    <h3>Ранковий ліс</h3>
-                    <p>Створення гнучких та адаптивних сіток інтерфейсу за допомогою технології Flexbox.</p>
-                </div>
-            </div>
+        <a href="#skills">Навички</a>
 
-            <!-- Картка 4 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Піщані дюни">
-                <div class="card-body">
-                    <h3>Дика природа</h3>
-                    <p>Оптимізація інтерфейсів для коректного відображення на мобільних екранах та планшетах.</p>
-                </div>
-            </div>
+        <a href="#contacts">Контакти</a>
 
-            <!-- Картка 5 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Гірське озеро">
-                <div class="card-body">
-                    <h3>Кришталеве озеро</h3>
-                    <p>Робота з внутрішніми відступами, рамками та полями для покращення читабельності тексту.</p>
-                </div>
-            </div>
+    </nav>
 
-            <!-- Картка 6 -->
-            <div class="gallery-card">
-                <img src="https://picsum.photos" alt="Тропіки">
-                <div class="card-body">
-                    <h3>Тропічний ліс</h3>
-                    <p>Валідація написаного коду та фінальне тестування адаптивності через інструменти розробника.</p>
-                </div>
-            </div>
+    <!-- Main -->
+    <main>
 
-        </div>
+        <!-- About -->
+        <section id="about">
+
+            <h2>Про себе</h2>
+
+            <p>
+                Мене звати Олег. Я навчаюся веб-технологіям та
+                цікавлюсь створенням сучасних сайтів.
+            </p>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+
+            <h2>Навички</h2>
+
+            <ul>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+            </ul>
+
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio">
+
+            <h2>Портфоліо</h2>
+
+            <img src="https://picsum.photos/300/200" alt="Фото">
+
+            <p>
+                Приклад мого майбутнього проєкту.
+            </p>
+
+        </section>
+
+        <!-- Contacts -->
+        <section id="contacts">
+
+            <h2>Контакти</h2>
+
+            <form id="contactForm">
+
+                <input type="text" id="name" placeholder="Ваше ім'я">
+
+                <input type="email" id="email" placeholder="Ваш Email">
+
+                <textarea id="message" placeholder="Ваше повідомлення"></textarea>
+
+                <button type="submit">
+                    Надіслати
+                </button>
+
+            </form>
+
+        </section>
+
     </main>
 
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2025 Олег Варениця
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>
