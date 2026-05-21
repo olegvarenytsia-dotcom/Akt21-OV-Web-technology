@@ -1,1 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
 
+header {
+    background-color: #222222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.card {
+
+    background-color: white;
+
+    border: 3px solid #222222;
+
+    padding: 15px;
+
+    margin: 10px;
+
+    width: 300px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px gray;
+}
+
+.card img {
+
+    width: 100%;
+
+    border-radius: 10px;
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+
+    .gallery {
+
+        justify-content: center;
+    }
+
+    .card {
+
+        width: 250px;
+    }
+}
+
+/* Телефон */
+@media (max-width: 480px) {
+
+    body {
+
+        background-color: #dddddd;
+
+        font-family: Verdana, sans-serif;
+    }
+
+    .gallery {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+
+        width: 90%;
+
+        background-color: #ffcc00;
+
+        font-size: 18px;
+    }
+}
