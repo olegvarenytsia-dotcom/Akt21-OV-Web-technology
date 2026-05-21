@@ -1,1 +1,222 @@
 
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 7</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #222222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 350px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #errors {
+            color: red;
+            margin-top: 15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Лабораторна робота 7</h1>
+    </header>
+
+    <main>
+
+        <form id="registerForm">
+
+            <label>Ім'я:</label>
+            <input type="text" id="name">
+
+            <label>Email:</label>
+            <input type="email" id="email">
+
+            <label>Пароль:</label>
+            <input type="password" id="password">
+
+            <label>Підтвердження пароля:</label>
+            <input type="password" id="confirmPassword">
+
+            <label>Вік:</label>
+            <input type="number" id="age">
+
+            <label>Стать:</label>
+
+            <div class="radio-group">
+
+                <input type="radio" name="gender" value="Чоловік">
+                Чоловік
+
+                <input type="radio" name="gender" value="Жінка">
+                Жінка
+
+            </div>
+
+            <button type="submit">
+                Зареєструватися
+            </button>
+
+            <div id="errors"></div>
+
+        </form>
+
+    </main>
+
+    <script>
+
+        let form = document.getElementById("registerForm");
+
+        let errors = document.getElementById("errors");
+
+
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            errors.innerHTML = "";
+
+
+
+            let name = document.getElementById("name").value;
+
+            let email = document.getElementById("email").value;
+
+            let password = document.getElementById("password").value;
+
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            let age = document.getElementById("age").value;
+
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+
+
+            let errorMessages = [];
+
+
+
+            // Перевірка імені
+            if (name === "") {
+
+                errorMessages.push("Введіть ім'я.");
+
+            }
+
+
+
+            // Перевірка email
+            if (!email.includes("@")) {
+
+                errorMessages.push("Введіть правильний email.");
+
+            }
+
+
+
+            // Перевірка пароля
+            if (password.length < 6) {
+
+                errorMessages.push("Пароль має містити мінімум 6 символів.");
+
+            }
+
+
+
+            // Перевірка підтвердження пароля
+            if (password !== confirmPassword) {
+
+                errorMessages.push("Паролі не співпадають.");
+
+            }
+
+
+
+            // Перевірка віку
+            if (age < 10) {
+
+                errorMessages.push("Вік має бути 10+.");
+
+            }
+
+
+
+            // Перевірка статі
+            if (!gender) {
+
+                errorMessages.push("Оберіть стать.");
+
+            }
+
+
+
+            // Виведення помилок
+            if (errorMessages.length > 0) {
+
+                errors.innerHTML = errorMessages.join("<br>");
+
+            } else {
+
+                alert("Реєстрація успішна!");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
