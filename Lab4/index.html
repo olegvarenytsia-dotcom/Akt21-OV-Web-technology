@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота 4</title>
+</head>
+
+<body>
+
+    <h1>Лабораторна робота 4: Вступ до JavaScript</h1>
+
+    <script>
+
+        // Завдання 1: Привітання користувача
+        console.log("Завдання 1.");
+
+        // Отримання імені користувача
+        let name = prompt("Введіть ваше ім'я:");
+
+        // Виведення привітання
+        alert("Привіт, " + name + "!");
+
+
+
+        // Завдання 2: Проста арифметика
+        console.log("Завдання 2.");
+
+        // Введення двох чисел
+        let number1 = parseFloat(prompt("Введіть перше число:"));
+        let number2 = parseFloat(prompt("Введіть друге число:"));
+
+        // Перевірка правильності введення
+        if (isNaN(number1) || isNaN(number2)) {
+
+            alert("Помилка! Потрібно вводити числа.");
+
+        } else {
+
+            // Обчислення суми
+            let sum = number1 + number2;
+
+            // Виведення результату
+            alert("Сума чисел = " + sum);
+        }
+
+
+
+        // Завдання 3: Вік користувача
+        console.log("Завдання 3.");
+
+        // Введення року народження
+        let birthYear = parseInt(prompt("Введіть ваш рік народження:"));
+
+        // Поточний рік
+        let currentYear = 2025;
+
+        // Перевірка правильності введення
+        if (isNaN(birthYear)) {
+
+            alert("Помилка! Введіть правильний рік.");
+
+        } else {
+
+            // Обчислення віку
+            let age = currentYear - birthYear;
+
+            // Виведення результату
+            alert("Ваш вік: " + age + " років.");
+        }
+
+    </script>
+
+</body>
+
+</html>
