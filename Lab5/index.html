@@ -99,17 +99,6 @@
 
         </section>
 
-        <!-- Додаткове завдання -->
-        <section>
-
-            <h2>Додаткове завдання</h2>
-
-            <button id="variantButton">
-                Натисніть 2 рази!
-            </button>
-
-        </section>
-
     </main>
 
     <footer>
@@ -128,8 +117,6 @@
         let removeButton = document.getElementById("removeButton");
 
         let list = document.getElementById("list");
-
-        let variantButton = document.getElementById("variantButton");
 
 
 
@@ -194,27 +181,9 @@
 
         });
 
-
-
-        // Додаткове завдання
-        let clickCount = 0;
-
-        variantButton.addEventListener("click", function () {
-
-            clickCount++;
-
-            if (clickCount === 2) {
-
-                alert("Олег Варениця варіант номер 2!");
-
-                clickCount = 0;
-
-            }
-
-        });
-
     </script>
 
 </body>
 
+</html>
 </html>
